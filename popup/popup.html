@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insta Video Controller</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Video controls</h1>
+    <label class="switch" title="Turn the extension on or off">
+      <input type="checkbox" id="enabled">
+      <span class="track"></span>
+    </label>
+  </header>
+
+  <main id="settings">
+    <label class="row">
+      <span>Always show control bar</span>
+      <input type="checkbox" id="alwaysShow">
+    </label>
+    <label class="row">
+      <span>Keyboard shortcuts</span>
+      <input type="checkbox" id="shortcuts">
+    </label>
+    <label class="row">
+      <span>Remember volume</span>
+      <input type="checkbox" id="rememberVolume">
+    </label>
+    <label class="row">
+      <span>Default speed</span>
+      <select id="defaultSpeed">
+        <option value="0.25">0.25x</option><option value="0.5">0.5x</option>
+        <option value="0.75">0.75x</option><option value="1">1x</option>
+        <option value="1.25">1.25x</option><option value="1.5">1.5x</option>
+        <option value="1.75">1.75x</option><option value="2">2x</option>
+        <option value="2.5">2.5x</option><option value="3">3x</option>
+      </select>
+    </label>
+    <label class="row">
+      <span>Skip length</span>
+      <select id="skipSeconds">
+        <option value="5">5 seconds</option><option value="10">10 seconds</option>
+        <option value="15">15 seconds</option><option value="30">30 seconds</option>
+      </select>
+    </label>
+  </main>
+
+  <section class="keys">
+    <h2>Shortcuts</h2>
+    <dl>
+      <dt>K</dt><dd>Play / pause</dd>
+      <dt>J / L</dt><dd>Skip back / forward</dd>
+      <dt>&lt; / &gt;</dt><dd>Slower / faster</dd>
+      <dt>M</dt><dd>Mute</dd>
+      <dt>R</dt><dd>Loop</dd>
+      <dt>P</dt><dd>Picture-in-Picture</dd>
+      <dt>0–9</dt><dd>Jump to 0–90%</dd>
+    </dl>
+  </section>
+
+  <footer style="margin-top:12px;font-size:11px;opacity:.7;text-align:center">
+    By Tamim Hasan · <a href="https://tamimlabs.com" target="_blank" rel="noopener" style="color:#ff3d7f;text-decoration:none">tamimlabs.com</a>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
